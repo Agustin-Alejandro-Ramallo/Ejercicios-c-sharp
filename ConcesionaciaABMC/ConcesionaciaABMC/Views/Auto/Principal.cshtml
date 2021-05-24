@@ -1,0 +1,74 @@
+﻿
+
+@{
+    ViewBag.Title = "Principal";
+}
+
+@model List<ConcesionaciaABMC.Models.DTOAuto>
+<h2 class="text-success">Listado de autos</h2>
+<div class="container-fluid col-lg-12">
+   
+
+    <div class="row">
+        <div class="col-lg-6">
+
+            <table class="table-bordered table-striped table-hover bg-info table-responsive">
+
+                <thead>
+                    <tr>
+
+                        <th class="text-center">
+                            Patente
+                        </th>
+                        <th class="text-center">
+                            Nombre
+                        </th>
+                        <th class="text-center">
+                            Km
+                        </th>
+                        <th class="text-center">
+                            Promocion
+                        </th>
+                        <th class="text-center">
+                            Precio
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="text-center">
+
+                            <td>
+                                @item.patente
+                            </td>
+                            <td>
+                                @item.nombre
+                            </td>
+                            <td>
+                                @item.km
+                            </td>
+
+                            @if (item.promocion)
+                            {
+                                <td>Si</td>
+                            }
+                            else
+                            {
+                                <td>No</td>
+                            }
+
+
+                            <td>
+                                @item.PrecioPromocion
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</div>

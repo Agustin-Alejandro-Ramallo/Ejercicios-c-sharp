@@ -1,0 +1,19 @@
+﻿@using ConcesionaciaABMC.Models
+@{
+    ViewBag.Title = "Reporte";
+}
+
+<h2>Reporte</h2>
+
+@model VMReporte
+<hr />
+
+<h3>Vehiculo usado con menor cantidad de km</h3>
+<table class="table table-striped">
+    <tr>
+        <th>Patente: @Model.UsadoMasNuevo.patente</th>
+        <th>km: @Model.UsadoMasNuevo.km</th>
+        <th>precio: @Model.UsadoMasNuevo.precio</th>
+    </tr>
+
+</table>
