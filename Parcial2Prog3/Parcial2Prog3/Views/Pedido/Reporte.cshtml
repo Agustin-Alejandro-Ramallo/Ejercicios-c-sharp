@@ -1,0 +1,22 @@
+﻿@using Parcial2Prog3.Models
+@{
+    ViewBag.Title = "Reporte";
+}
+@model VMCantidadDelivery
+<h2>Reporte</h2>
+
+<h2>Cantidad de Pedidos por Delivery </h2>
+
+<table class="table table-striped">
+<tr>
+    <th>Tipo de Delivery</th>
+    <th>Cantidad</th>
+</tr>
+@foreach (var item in Model.CantidadPorDelivery)
+{
+    <tr>
+        <td>@item.Nombre</td>
+        <td>@item.Cantidad</td>
+    </tr>
+}
+</table>

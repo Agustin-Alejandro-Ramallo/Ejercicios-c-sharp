@@ -1,0 +1,25 @@
+﻿@model List<Parcial2Prog3.Models.DTOPedido>
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Lista de Pedidos</h2>
+
+<table class="table table-striped">
+    <tr>
+        <td>Cliente</td>
+        <td>Tipo de Desayuno</td>
+        <td>Tipo de Delivery</td>
+        <td>Precio Total</td>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Cliente</td>
+            <td>@item.TipoDesayuno</td>
+            <td>@item.TipoDelivery</td>
+            <td>@item.PrecioTotal</td>
+        </tr>
+    }
+</table>
